@@ -1,0 +1,54 @@
+.popper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.popper:hover::before {
+  content: attr(content-tooltip);
+  text-align: center;
+  display: block;
+  position: absolute;
+  background-color: #ffffff;
+  padding: 1px;
+  width: 55px;
+  border: 1px solid #4b4b4b;
+  /* border-radius: 3px; */
+  white-space: nowrap;
+  z-index: 1;
+  bottom: -100%; /* Ajusta la posición vertical según sea necesario */
+  left: 100%;
+  /* transform: translateX(-50%); */
+  opacity: 1;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: opacity 0.3s ease; /* Agrega transición para suavizar la aparición */
+}
+
+.popper__title {
+  font-size: 24px;
+  line-height: 36px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.popper__content {
+  display: block;
+  position: absolute;
+  top: 105%;
+  left: 0;
+  background-color: #ffffff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  z-index: 1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
