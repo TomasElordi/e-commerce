@@ -12,7 +12,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} `}>
-        <div className="h-screen md:overflow-hidden">
+        <div className=" ">
           <div className="w-full flex-none ">
             <Nav user={session?.user} />
           </div>

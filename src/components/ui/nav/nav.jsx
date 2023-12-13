@@ -6,6 +6,7 @@ import { signOut } from "@/auth/auth";
 import LoginIcon from "@/icons/login";
 import PopOver from "@/components/ui/popover/PopOver";
 import OptionsUser from "@/components/ui/nav/options-user";
+import Search from "@/components/ui/nav/search";
 import CategoriesListServer from "@/components/ui/nav/categories-list-server";
 
 export default function Nav({ user }) {
@@ -26,6 +27,7 @@ export default function Nav({ user }) {
         </Link>
         <div className="flex grow flex-row justify-between space-x-2  ">
           <NavLinks />
+          <Search />
           <div className="hidden w-auto h-full grow rounded-md  md:block"></div>
           <div className="flex h-[48px]  grow items-center justify-center gap-2 rounded-md   text-sm font-medium  md:flex-none md:justify-start md:p-2 md:px-3">
             <span className="sr-only">Open user menu</span>
@@ -72,7 +74,7 @@ export default function Nav({ user }) {
           </div>
         </div>
       </div>
-      <CategoriesListServer />
+      {/* <CategoriesListServer /> */}
     </>
   );
 }
